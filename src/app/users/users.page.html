@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Bookings for {{referenceEmail}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div  id="container">
+    <div class="card-body position-relative" style="max-width: 710px; margin: auto">
+      <div class="ag-theme-balham" style="height:550px;">
+        <app-ag-grid *ngIf="AgLoad" [ColumnDefs]="this.ColumnDefs" [RowData]="this.RowData"
+                     [IsColumnsToFit]="true">
+        </app-ag-grid>
+      </div>
+    </div>
+  </div>
+</ion-content>
